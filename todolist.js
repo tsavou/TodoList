@@ -25,10 +25,10 @@ function renderTodoLists() {
     todoListsContainer.innerHTML = ''; // Effacer l'affichage actuel
 
     Object.keys(todoLists).forEach(listName => {
-        const div = document.createElement('div');
-        div.textContent = listName;
-        div.onclick = () => selectTodoList(listName); // Sélectionner une liste
-        todoListsContainer.appendChild(div);
+        const li = document.createElement('li');
+        li.textContent = listName;
+        li.onclick = () => selectTodoList(listName); // Sélectionner une liste
+        todoListsContainer.appendChild(li);
     });
 }
 
