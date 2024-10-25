@@ -2,13 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>TODO</title>
 </head>
 <body>
 
-<div>
-    <button>New ToDo list</button>
+<div class="container">
+    <h1>Gestionnaire de To-Do Lists</h1>
+    <input type="text" id="list-name-input" placeholder="Nom de la nouvelle liste...">
+    <button onclick="createTodoList()">Créer une nouvelle liste</button>
+    <h2>Sélectionnez l'une de vos listes</h2>
+
+    <ul id="todo-lists">
+    </ul>
+
+    <h2>Liste des tâches</h2>
+    <input type="text" id="task-input" placeholder="Nouvelle tâche...">
+    <button onclick="addTask()">Ajouter</button>
+    <ul id="task-list"></ul>
+
+    <div id="task-detail" style="display:none;">
+        <h2>Détails de la tâche</h2>
+        <p id="task-text"></p>
+        <button onclick="closeTaskDetail()">Fermer</button>
+    </div>
 </div>
+
+<script src="todolist.js"></script>
 
 </body>
 </html>
